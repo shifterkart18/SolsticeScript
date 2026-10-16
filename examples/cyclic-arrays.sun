@@ -1,0 +1,17 @@
+-- Tracing garbage collection supports self-referential arrays.
+
+node = {}
+node[0] = "root"
+node[1] = node
+
+printline(node[1][0])
+printline(length(node))
+
+node = nil
+
+-- Allocate enough temporary objects to exercise collection.
+for index = 1, 200 do
+	temporary = {"temporary", index}
+end
+
+printline("cyclic structure released safely")

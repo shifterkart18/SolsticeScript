@@ -1,0 +1,26 @@
+-- Arrays are zero-based, dynamically sized, and may be nested.
+
+function sum(values)
+	local total = 0
+	local index = 0
+
+	while index < length(values) do
+		if values[index] ~= nil then
+			total = total + values[index]
+		end
+		index = index + 1
+	end
+
+	return total
+end
+
+numbers = {2, 3, 5, 7}
+numbers[5] = 13
+
+printline(sum(numbers))
+
+matrix = {{1, 2}, {3, 4}}
+matrix[1][0] = 30
+
+printline(matrix[0][1])
+printline(matrix[1][0])

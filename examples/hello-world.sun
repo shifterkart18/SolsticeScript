@@ -1,0 +1,6 @@
+-- The smallest useful Solstice Script program.
+
+name = "Solstice"
+
+printline("Hello, world!")
+printline("Hello, " .. name .. "!")

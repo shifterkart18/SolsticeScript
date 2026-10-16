@@ -1,0 +1,2 @@
+printline(-1 + 2)
+printline(not false and true)

@@ -1,0 +1,4 @@
+-- This sample intentionally produces a source-located runtime error.
+
+values = {1, 2}
+printline(values[2])

@@ -1,0 +1,13 @@
+-- Recursive calls and numeric for loops.
+
+function fibonacci(value)
+	if value <= 1 then
+		return value
+	end
+
+	return fibonacci(value - 1) + fibonacci(value - 2)
+end
+
+for index = 0, 10 do
+	printline(fibonacci(index))
+end

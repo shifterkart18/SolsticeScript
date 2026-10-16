@@ -1,0 +1,12 @@
+cycle = {}
+cycle[0] = cycle
+printline(length(cycle))
+cycle = nil
+
+count = 0
+while count < 200 do
+	value = {"temporary"}
+	count = count + 1
+end
+
+printline("PASS_GC")

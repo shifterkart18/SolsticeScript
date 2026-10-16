@@ -1,0 +1,56 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+      - "u/**"
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    name: Windows x64 ${{ matrix.configuration }}
+    runs-on: windows-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        configuration:
+          - Debug
+          - Release
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Configure MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build solution
+        run: >
+          msbuild SolsticeScriptCompiler.sln
+          /t:Rebuild
+          /p:Configuration=${{ matrix.configuration }}
+          /p:Platform=x64
+          /m
+          /v:minimal
+
+      - name: Run native API tests
+        run: .\x64\${{ matrix.configuration }}\SolsticeScriptTests.exe
+
+      - name: Run script regression tests
+        shell: powershell
+        run: >
+          .\tests\Invoke-RegressionTests.ps1
+          -Executable .\x64\${{ matrix.configuration }}\SolsticeScriptCompiler.exe
+
+      - name: Run examples
+        shell: powershell
+        run: >
+          .\examples\Invoke-Examples.ps1
+          -Executable .\x64\${{ matrix.configuration }}\SolsticeScriptCompiler.exe

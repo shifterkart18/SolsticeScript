@@ -1,0 +1,12 @@
+-- Recursive functions retain the familiar Lua-like syntax.
+
+function factorial(value)
+	if value == 0 then
+		return 1
+	end
+
+	return value * factorial(value - 1)
+end
+
+printline("factorial(5)")
+printline(factorial(5))

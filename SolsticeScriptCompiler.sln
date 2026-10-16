@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.12.12308.306 insiders
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SolsticeScriptCompiler", "SolsticeScriptCompiler\SolsticeScriptCompiler.vcxproj", "{78046DD5-A1BF-44EC-A391-C799CE4BF3AE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SolsticeScriptCLI", "cli\SolsticeScriptCompiler.vcxproj", "{B42F3A11-64D9-46AC-B98D-7B41375B1E10}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SolsticeScriptTests", "tests\SolsticeScriptTests.vcxproj", "{A17C1B82-7F1E-4A3F-BD4C-5F1A8E65C201}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78046DD5-A1BF-44EC-A391-C799CE4BF3AE}.Debug|x64.ActiveCfg = Debug|x64
+		{78046DD5-A1BF-44EC-A391-C799CE4BF3AE}.Debug|x64.Build.0 = Debug|x64
+		{78046DD5-A1BF-44EC-A391-C799CE4BF3AE}.Release|x64.ActiveCfg = Release|x64
+		{78046DD5-A1BF-44EC-A391-C799CE4BF3AE}.Release|x64.Build.0 = Release|x64
+		{B42F3A11-64D9-46AC-B98D-7B41375B1E10}.Debug|x64.ActiveCfg = Debug|x64
+		{B42F3A11-64D9-46AC-B98D-7B41375B1E10}.Debug|x64.Build.0 = Debug|x64
+		{B42F3A11-64D9-46AC-B98D-7B41375B1E10}.Release|x64.ActiveCfg = Release|x64
+		{B42F3A11-64D9-46AC-B98D-7B41375B1E10}.Release|x64.Build.0 = Release|x64
+		{A17C1B82-7F1E-4A3F-BD4C-5F1A8E65C201}.Debug|x64.ActiveCfg = Debug|x64
+		{A17C1B82-7F1E-4A3F-BD4C-5F1A8E65C201}.Debug|x64.Build.0 = Debug|x64
+		{A17C1B82-7F1E-4A3F-BD4C-5F1A8E65C201}.Release|x64.ActiveCfg = Release|x64
+		{A17C1B82-7F1E-4A3F-BD4C-5F1A8E65C201}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A89FDA50-D370-458D-9AFB-85D4BDEFAD02}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+# Visual Studio state
+.vs/
+*.sdf
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
+*.vsidx
+
+# Build output directories
+**/Debug/
+**/Release/
+**/x64/
+**/ipch/
+build/
+out/
+
+# Compiler and linker outputs
+*.exe
+*.ilk
+*.idb
+*.ipch
+*.iobj
+*.ipdb
+*.lib
+*.obj
+*.pdb
+*.tlog
+*.lastbuildstate
+*.log
+
+# Test and editor leftovers
+*.tmp
+*.userosscache
+*.sln.docstates
