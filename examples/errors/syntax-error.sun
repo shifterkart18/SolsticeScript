@@ -1,0 +1,4 @@
+-- This sample intentionally produces a source-located compile error.
+
+if true then
+	printline("missing end")

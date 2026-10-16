@@ -1,0 +1,23 @@
+-- Numeric for loops, while loops, repeat/until, booleans, and short circuiting.
+
+sum = 0
+for value = 1, 5 do
+	sum = sum + value
+end
+
+countdown = 3
+while countdown > 0 do
+	printline(countdown)
+	countdown = countdown - 1
+end
+
+repeat
+	countdown = countdown + 1
+until countdown == 2
+
+if sum == 15 and countdown == 2 then
+	printline("control flow complete")
+end
+
+false and printline("this line is short-circuited")
+true or printline("this line is also short-circuited")

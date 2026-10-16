@@ -1,0 +1,5 @@
+printline(double(6))
+
+function double(value)
+	return value * 2
+end

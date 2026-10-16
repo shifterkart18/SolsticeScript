@@ -1,0 +1,20 @@
+-- Strings support escapes. Nil, false, and numeric zero are false.
+
+printline("first line\nsecond line")
+printline("quote: \"Solstice\"")
+
+if nil then
+	printline("nil should not be truthy")
+else
+	printline("nil is false")
+end
+
+if 0 then
+	printline("zero should not be truthy")
+else
+	printline("zero is false")
+end
+
+if "text" then
+	printline("strings are true")
+end

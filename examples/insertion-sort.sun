@@ -1,0 +1,32 @@
+-- In-place insertion sort over a garbage-collected array.
+
+function insertionSort(values)
+	local index = 1
+
+	while index < length(values) do
+		local current = values[index]
+		local position = index - 1
+
+		while position >= 0 and values[position] > current do
+			values[position + 1] = values[position]
+			position = position - 1
+		end
+
+		values[position + 1] = current
+		index = index + 1
+	end
+
+	return values
+end
+
+function printArray(values)
+	local index = 0
+	while index < length(values) do
+		printline(values[index])
+		index = index + 1
+	end
+end
+
+values = {8, -1, 6, 3, 2, 9, 0}
+insertionSort(values)
+printArray(values)

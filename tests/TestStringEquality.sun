@@ -1,0 +1,11 @@
+if "same" == "same" then
+	printline("PASS_EQUAL")
+else
+	printline("FAIL_EQUAL")
+end
+
+if "left" ~= "right" then
+	printline("PASS_NOTEQUAL")
+else
+	printline("FAIL_NOTEQUAL")
+end

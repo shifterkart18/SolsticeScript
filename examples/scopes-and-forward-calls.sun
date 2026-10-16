@@ -1,0 +1,14 @@
+-- Functions may be called before their declarations.
+
+printline(greeting("Solstice"))
+
+function greeting(name)
+	local message = "Hello, " .. name
+
+	do
+		local message = "Inner scope"
+		printline(message)
+	end
+
+	return message
+end

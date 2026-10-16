@@ -1,0 +1,21 @@
+left = "Hello"
+right = "World"
+
+if left == right then
+	printline("unexpected equality")
+elseif left ~= right then
+	printline("different strings compare as different")
+else
+	printline("unexpected comparison result")
+end
+
+left = "Solstice"
+right = "Solstice"
+
+if left == right then
+	printline("matching strings compare as equal")
+else
+	printline("unexpected comparison result")
+end
+
+printline("Hello, " .. left .. "!")

@@ -1,0 +1,13 @@
+function getText()
+	return "PASS_RETURN"
+end
+
+function getArray()
+	values = {1}
+	values[0] = "PASS_ARRAY"
+	return values
+end
+
+printline(getText())
+result = getArray()
+printline(result[0])
